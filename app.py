@@ -25,10 +25,10 @@ classes = {
 @st.cache_resource
 def load_model():
     try:
-        model = tf.keras.models.load_model('traffic_sign_model.h5')
+        model = tf.keras.models.load_model('best_model.h5')
         return model
     except:
-        st.error("Model file not found. Please ensure 'traffic_sign_model.h5' exists.")
+        st.error("Model file not found. Please ensure 'best_model.h5' exists.")
         return None
 
 # Preprocess image
